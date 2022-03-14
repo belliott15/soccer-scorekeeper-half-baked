@@ -20,6 +20,8 @@ let name2 =  '';
 let score1 = 0;
 let score2 = 0;
 
+let gameLog = [];
+
 nameFormButton.addEventListener('click', (e) => {
     // get the name data from the form
     const teamOneInput = document.querySelector('#team-one');
@@ -68,16 +70,22 @@ teamTwoSubtractButton.addEventListener('click', () => {
 finishGameButton.addEventListener('click', () => {
     
     // add the current game to an array of games in state
+    let gameArr = [{ name1: name1, name2: name2, score1: score1, score2: score2 }];
     // it will be helpful to keep track of these games as objects with 4 properties, one for each piece of state we're tracking
     // for example, make an object like this: { name1: 'ducks', name2: 'bears' ,score1: 1, score2: 2 } 
     // then push it to your array in state
+    gameLog.push(gameArr);
     // (be sure to make a new object. do not declare the object in global scope and mutate it for reuse. This would cause difficult bugs)
     
     displayAllGames();
 
     // reset the state to zero and empty strings
-    
+    let name1 = '';
+    let name2 =  '';
+    let score1 = 0;
+    let score2 = 0;
     // refresh the current game element with new data by calling the appropriate function
+    refreshCurrentGameEl();
 });
 
 function refreshCurrentGameEl() {
@@ -87,8 +95,8 @@ function refreshCurrentGameEl() {
     teamTwoLabel.textContent = name2;
 
     // const gameEl = . . . 
-    const gameEl = document.
-    // make a new gameEl here by calling renderGame with the approriate arguments. 
+    // make a new gameEl here by calling renderGame with the approriate arguments.
+    const gameEl = renderGame(name1, name2, score1, score2);
     // Check the renderGame function declaration in render-utils.js to figure out the correct arguments to pass to this function 
     // In render-utils.js as yourself: How many arguments does the function take? What order does it take them in?
     
@@ -100,7 +108,7 @@ function refreshCurrentGameEl() {
 
 function displayAllGames() {
     // clear out the past games list in the DOM
-
+    currentGameEl.textContent = '';
     // loop through the past games in state
     // use the renderGame function to render and append a past game for each past game in state
     // again, review the renderGame function in render-utils.js. How many arguments does it take? What order does it take them in?
