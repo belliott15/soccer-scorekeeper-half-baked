@@ -88,6 +88,11 @@ p {
     margin: 10px;
 }
 
+#past-games-container .game:hover{
+    opacity: .75;
+    background-color: gray;
+}
+
 #current-game-container {
     display: flex;
     justify-content: center;
