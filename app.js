@@ -13,8 +13,6 @@ const finishGameButton = document.getElementById('finish-game-button');
 const teamOneLabel = document.getElementById('team-one-name');
 const teamTwoLabel = document.getElementById('team-two-name');
 
-const numberOfTeamsDropdown = documnet.getElementById('number-teams');
-
 // create an array to hold on to the state of past games
 
 let name1 = '';
@@ -86,6 +84,8 @@ finishGameButton.addEventListener('click', () => {
     refreshCurrentGameEl();
 });
 
+
+
 function refreshCurrentGameEl() {
     currentGameEl.textContent = '';
 
@@ -114,8 +114,4 @@ function displayAllGames() {
     }
     // use the renderGame function to render and append a past game for each past game in state
     // again, review the renderGame function in render-utils.js. How many arguments does it take? What order does it take them in?
-}
-
-function teamNumberHandle() {
-    
 }
