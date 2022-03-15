@@ -14,12 +14,14 @@ const teamTwoLabel = document.getElementById('team-two-name');
 
 // create an array to hold on to the state of past games
 
-let name1 = '';
-let name2 = '';
+let name1 = 'Team One';
+let name2 = 'Team Two';
 let score1 = 0;
 let score2 = 0;
 
 let gameLog = [];
+
+refreshCurrentGameEl();
 
 nameFormButton.addEventListener('click', () => {
     // get the name data from the form
@@ -81,8 +83,8 @@ finishGameButton.addEventListener('click', () => {
     // (be sure to make a new object. do not declare the object in global scope and mutate it for reuse. This would cause difficult bugs)
     displayAllGames();
     // reset the state to zero and empty strings
-    name1 = '';
-    name2 = '';
+    name1 = '-';
+    name2 = '-';
     score1 = 0;
     score2 = 0;
     // refresh the current game element with new data by calling the appropriate function
