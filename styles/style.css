@@ -88,6 +88,12 @@ p {
     margin: 10px;
 }
 
+#past-games-container .game:hover{
+    background-color: rgba(0,0,0,0.25);
+    border-spacing: 10px;
+    border-style: double;
+}
+
 #current-game-container {
     display: flex;
     justify-content: center;
@@ -194,4 +200,11 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.deleteButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
