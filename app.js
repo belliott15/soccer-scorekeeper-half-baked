@@ -3,7 +3,6 @@ import { renderGame } from './render-utils.js';
 const currentGameEl = document.getElementById('current-game-container');
 const pastGamesEl = document.getElementById('past-games-container');
 
-
 const nameFormButton = document.getElementById('name-form-button');
 const teamOneAddButton = document.getElementById('team-one-add-button');
 const teamTwoAddButton = document.getElementById('team-two-add-button');
@@ -36,10 +35,12 @@ nameFormButton.addEventListener('click', () => {
     refreshCurrentGameEl();
 });
 
+
 pastGamesEl.addEventListener('click', () => {
     gameLog.shift();
     displayAllGames();
 });
+
 
 teamOneAddButton.addEventListener('click', () => {
     // increment the current state for team one's score

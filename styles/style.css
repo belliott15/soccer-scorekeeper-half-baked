@@ -201,3 +201,10 @@ p {
     flex-direction: column;
     justify-content: center;
 }
+
+.deleteButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
