@@ -21,7 +21,7 @@ let score2 = 0;
 
 let gameLog = [];
 
-refreshCurrentGameEl();
+// refreshCurrentGameEl();
 
 nameFormButton.addEventListener('click', () => {
     // get the name data from the form
