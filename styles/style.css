@@ -89,8 +89,9 @@ p {
 }
 
 #past-games-container .game:hover{
-    opacity: .75;
-    background-color: gray;
+    background-color: rgba(0,0,0,0.25);
+    border-spacing: 10px;
+    border-style: double;
 }
 
 #current-game-container {

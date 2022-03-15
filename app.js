@@ -36,6 +36,10 @@ nameFormButton.addEventListener('click', () => {
     refreshCurrentGameEl();
 });
 
+pastGamesEl.addEventListener('click', () => {
+    gameLog.shift();
+    displayAllGames();
+});
 
 teamOneAddButton.addEventListener('click', () => {
     // increment the current state for team one's score
@@ -84,8 +88,6 @@ finishGameButton.addEventListener('click', () => {
     refreshCurrentGameEl();
 });
 
-
-
 function refreshCurrentGameEl() {
     currentGameEl.textContent = '';
 
@@ -112,6 +114,7 @@ function displayAllGames() {
         const gameEl = renderGame(game.name1, game.name2, game.score1, game.score2);
         pastGamesEl.append(gameEl);
     }
+    // pastGamesEl.classList.add('game');
     // use the renderGame function to render and append a past game for each past game in state
     // again, review the renderGame function in render-utils.js. How many arguments does it take? What order does it take them in?
 }
